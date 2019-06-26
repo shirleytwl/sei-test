@@ -1,0 +1,47 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <input class="starter" id="numberInput1" placeholder="numberInput1"/>
+    <!-- <input class="starter" id="numberInput2" placeholder="numberInput2"/> -->
+    <input class="starter" id="stringInput" placeholder="stringInput"/>
+    <h2>output:</h2>
+    <p class="starter" id="output"></p>
+
+    <script>
+      document.querySelector('#numberInput1').addEventListener('change', function(event){
+        var numberInput1 = event.target.value;
+        checkInput()
+      });
+
+      /*/ document.querySelector('#numberInput2').addEventListener('change', function(event){
+      //   var numberInput = event.target.value;
+      //   checkInput()
+
+      // }); */
+
+      document.querySelector('#stringInput').addEventListener('change', function(event){
+        var stringInput = event.target.value;
+        checkInput()
+      });
+
+      var display = function( data ){
+        var output = document.querySelector('#output');
+        output.innerText = data;
+      }
+
+      var checkInput = function(){
+        if (document.querySelector('#numberInput1').value === "" || document.querySelector('#stringInput').value === ""){
+          console.log("blank")
+        }
+
+        else {
+          console.log("There is a input")
+          inputHappened(document.querySelector('#numberInput1').value, document.querySelector('#stringInput').value)
+        }
+      };
+
+    </script>
+    <script src="test.js"></script>
+  </body>
+</html>
